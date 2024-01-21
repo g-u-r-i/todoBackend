@@ -17,4 +17,4 @@ const signupSchema=mongodb.Schema({
     }
     
 })
-module.exports=mongodb.model("login",signupSchema)
+module.exports=mongodb.model("signUp",signupSchema)

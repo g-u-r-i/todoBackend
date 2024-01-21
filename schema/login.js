@@ -1,5 +1,8 @@
 const mongodb = require('mongoose')
-const loginSchema=mongodb.Schema({
+const loginSchema=mongodb.Schema({ name:{
+    type:String,
+    required:true
+},
     email:{
         type:String,
         required:true
