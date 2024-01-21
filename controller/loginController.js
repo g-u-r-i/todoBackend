@@ -12,4 +12,19 @@ const loginId = async (req, res) => {
     }
 };
 
-module.exports = { loginId };
+const signup =async(req,res)=>{
+    try {
+        await signupSchema.create({ name:req.body.name ,email: req.body.email, password: req.body.password });
+        
+        res.status(200).json({ message: "Login information inserted successfully." });
+    } catch (err) {
+        console.error("Error inserting login information:", err);
+        
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+}
+
+module.exports = { loginId,signup };
+
+
+
